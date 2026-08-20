@@ -1,0 +1,27 @@
+{% extends "my_page/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-danger text-white text-center">
+                    <h2>Confirmación de Correo Fallida</h2>
+                </div>
+                <div class="card-body bg-light text-center">
+                    <p class="fs-5 text-dark">
+                        El enlace de confirmación ha expirado o no es válido.
+                    </p>
+                    <p class="text-dark">
+                        Puedes solicitar un nuevo enlace de verificación a continuación:
+                    </p>
+                    <a href="{% url 'account_email' %}" class="btn btn-danger mt-3">
+                        Solicitar nuevo enlace de verificación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

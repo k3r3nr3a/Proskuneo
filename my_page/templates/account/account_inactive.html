@@ -1,0 +1,31 @@
+{% extends "my_page/base.html" %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px;"></div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-header text-white text-center" style="background-color: #ff5733;">
+                    <h2>Cuenta Inactiva</h2>
+                </div>
+                <div class="card-body bg-light text-center">
+                    <p class="text-danger fs-5">
+                        Tu cuenta aún no ha sido activada. Por favor revisa tu correo electrónico para confirmar tu registro.
+                    </p>
+
+                    <p class="mt-3">¿No recibiste el correo de confirmación?</p>
+                    <a href="{% url 'account_email' %}" class="btn btn-outline-secondary">
+                        Reenviar correo de activación
+                    </a>
+
+                    <div class="mt-4">
+                        <a href="{% url 'account_login' %}" class="btn btn-success me-2">Iniciar sesión</a>
+                        <a href="{% url 'account_signup' %}" class="btn btn-secondary">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

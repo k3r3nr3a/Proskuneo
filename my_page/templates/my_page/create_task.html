@@ -1,0 +1,16 @@
+{% extends 'my_page/base.html' %}
+
+{% block content %}
+
+    {{error}}
+    
+    <form action ="/tasks/create" style="margin-top: 100px;" method="POST">
+        {% csrf_token%}
+        {{form.as_p}}
+
+        <button>
+            save
+        </button>
+    </form>
+    <h1 style="margin-top: 100 px;"> CREATE TASKS</h1>
+{% endblock %}

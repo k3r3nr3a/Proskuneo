@@ -1,0 +1,9 @@
+{% extends 'my_page/base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <h3>¡Cuenta activada exitosamente!</h3>
+  <p>Ya puedes iniciar sesión.</p>
+  <a href="{% url 'signin' %}" class="btn btn-success">Iniciar sesión</a>
+</div>
+{% endblock %}

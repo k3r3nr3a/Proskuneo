@@ -1,0 +1,33 @@
+{% extends "my_page/base.html" %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <h1 class="text-center mb-4">Nuestros Vectores</h1>
+    <div class="row">
+        {% for design in designs %}
+        <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <a href="{% url 'vector_detail' design.id %}" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow vector-card">
+                    <img src="{{ design.preview_image.url }}" class="card-img-top" alt="{{ design.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ design.title }}</h5>
+                        <p class="card-text">${{ design.price }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.vector-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.vector-card:hover {
+    transform: scale(1.02);
+}
+</style>
+{% endblock %}
+

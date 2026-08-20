@@ -1,0 +1,223 @@
+{% extends "my_page/base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-text" data-aos="zoom-out">
+      <!-- Se ha movido el margen a una clase de CSS para evitar el estilo en línea -->
+      <div class="hero-spacer"></div>
+  
+      <a href="#about" class="btn-get-started scrollto">Comenzar</a>
+    </div>
+  
+
+  </section><!-- End Hero Section -->
+  
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Sobre Nosotros</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            Equipo de diseñadores gráficos apasionados por la creatividad y la innovación.<br>
+          </p>
+        </div>
+
+        <div class="row" style="min-height: 452px;">
+          <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
+            <img src="{% static 'my_page/assets/images/didi-01.jpg' %}" alt="">
+          </div>
+          
+          <div class="col-lg-6 content px-4 px-lg-5" data-aos="fade-left" dat-aos-delay="100">
+            <h4 style="text-align: justify; font-size: 20px; line-height: 1.8; padding: 5px;">Somos un equipo de diseñadores gráficos dedicados a la innovación y la creatividad, utilizando la última tecnología para ofrecer soluciones visuales impactantes. Nos especializamos en la creación de logos corporativos, flyers y banners, adaptándonos a las necesidades específicas de cada cliente.
+              Además, impartimos cursos de Silhouette Cameo tanto de manera presencial como online. Estos cursos están diseñados para enseñar desde lo básico hasta técnicas avanzadas, permitiéndote mejorar tus habilidades de diseño y aprovechar al máximo esta potente herramienta. Ya sea que busques mejorar la identidad visual de tu negocio o aprender nuevas técnicas de diseño, estamos aquí para ayudarte a alcanzar tus metas.</h4>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Featuress Section ======= -->
+    <section id="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" style="padding-top: 40px;">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header">
+              <h3 class="section-title">Servicios que Ofrecemos</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="{% static 'my_page/assets/images/serviciopre-01.jpg' %}" alt="" data-aos="fade-right">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row" style="margin-bottom: 50px;">
+
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up">
+                <div class="icon">
+                <a href="#advanced-features"><img src="{% static 'my_page/assets/images/certificate.png' %}" alt="Descripción de la imagen"></a>
+              </div>
+                <h4 class="title"><a href="#advanced-features" >Cursos de silhouette<br>Cameo</a></h4>
+                <p class="description">Ofrecemos cursos especializados en Silhouette Cameo, enseñándote a dominar esta herramienta de corte para crear proyectos personalizados.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up">
+                <div class="icon">
+                  <a href="#advanced-features7"><img src="{% static 'my_page/assets/images/iconodiseno.png' %}" alt="Descripción de la imagen"></a>
+              </div>
+                <h4 class="title"><a href="#advanced-features7">Curso de Adobe<br>Illustrator</a></h4>
+                <p class="description">Ofrecemos cursos especializados en Illustrator, para enseñarte a dominar este software profesional para diseñar a gran escala para proyectos orientados en la Gigantografía como Banners, vinil imprimible y Dtf </p>
+              </div>
+       
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Featuress Section -->
+
+    <!-- ======= Advanced Featuress Section ======= -->
+    <section id="advanced-features">
+
+      
+    <div class="features-row section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <img class="advanced-feature-img-right wow fadeInRight" src="{% static 'my_page/assets/images/cursocameo-01.jpg' %}" alt="">
+            <div>
+              <h2>Cursos de silhouette Cameo</h2>
+              <p style="line-height: 1.8; font-size: 20px;" class="texto-justificado">En nuestra empresa, nos especializamos en el diseño gráfico y estamos entusiasmados en ofrecer cursos de Silhouette Cameo para la comunidad. Ya sea que prefieras clases presenciales o en línea, nuestro objetivo es capacitarte desde cero en el uso del software Silhouette Cameo. Nuestros cursos cubren desde los principios básicos del programa hasta técnicas avanzadas para cortar y armar proyectos personalizados. Con nosotros, aprenderás a dominar todas las herramientas necesarias para llevar tus ideas creativas a la realidad, sin importar tu ubicación. ¡Únete a nosotros y lleva tu habilidad en diseño al siguiente nivel!.</p>
+              
+              <!-- CLASE CORREGIDA AQUÍ (scrollto) -->
+              <a href="{% url 'inscripcion' %}" class="btn-inscribirse">Inscribirse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3 style="font-weight: 500; color: rgb(0, 0, 0);">proskuneo</h3>
+              <p> Síguenos en nuestras redes sociales y no te<br>pierdas de ninguna novedad</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/proskuneo777/?hl=es" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/@proskuneodesign" class="youtube"><i class="bi bi-youtube"></i></a>
+                
+                <a href="https://www.tiktok.com/@proskuneodesign?lang=en" class="tiktok">
+                <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-top: -3px;">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z">
+                </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="bi bi-geo-alt"></i>
+                <p>Caracas, Venezuela</p>
+              </div>
+
+              <div>
+                <i class="bi bi-envelope"></i>
+                <p>proskuneokrzj@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="bi bi-phone"></i>
+                <p>(0424) 237.44.79</p>
+              </div>
+
+            </div>
+          </div>
+         <div class="col-lg-5 col-md-6">
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  </div>
+                  <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">cargando</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">tu mensaje ha sido enviado</div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Enviar mensaje</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-start text-center">
+          <div class="credits">
+            Pagina web diseñada por nosotros 
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#">Volver arriba</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'my_page/js/main.js' %}"></script>
+  <script src="{% static 'my_page/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'my_page/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'my_page/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'my_page/assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'my_page/js/main.js' %}"></script>
+
+  
+{% endblock %}

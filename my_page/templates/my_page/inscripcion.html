@@ -1,0 +1,341 @@
+{% extends "my_page/base.html" %}
+{% load static %}
+
+{% block content %}
+<style> 
+  
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(255, 255, 255);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      width: 100%;
+      margin-top: 70px; /*se le agrego un margin top*/
+    }
+
+    .caja {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .caja img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+
+    
+   .form-container {
+      width: 400px;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #bebdbd;
+    }
+
+    .container1 {
+
+      background-color: #45a049;
+      width: 95%;
+      
+
+    }
+
+
+   .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .line {
+            border-bottom: 1px solid #000000;
+            color: r;
+            margin-bottom: 15px;
+            width: 100vw; 
+            position: relative; 
+            left: 50%; 
+            transform: translateX(-50%);
+        }
+
+    @media (min-width: 768px) {
+      .CONTAINESTEXTO p,
+      .CONTAINESTEXTO li {
+      font-size: 20px;
+      line-height: 1.8;
+      }
+
+    .CONTAINESTEXTO h2 {
+      font-size: 36px;
+    }
+  }
+
+  </style>
+
+   <div class="grid-layout">
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/baseball.jpg' %}" alt="Imagen 1"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/dilia.jpg' %}" alt="Imagen 2"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/froze.jpg' %}" alt="Imagen 3"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/intensamente.jpg' %}" alt="Imagen 4"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/kuromi.jpg' %}" alt="Imagen 5"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/intensamente1.jpg' %}" alt="Imagen 6"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/minnie.jpg' %}" alt="Imagen 7"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/moana.jpg' %}" alt="Imagen 8"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/monster.jpg' %}" alt="Imagen 9"></div>
+    <div class="caja"><img src="{% static 'my_page/assets/images/toppers/niurka.jpg' %}" alt="Imagen 10"></div>
+
+  </div>
+
+
+ <div class="container mt-4 CONTAINESTEXTO">
+  <div class="row align-items-start">
+    
+    <!-- Sección de texto -->
+    <div class="col-12 col-md-6 text-start px-4" style="color: black;">
+      <h2><strong>Curso Intensivo de Silhouette Cameo</strong></h2>
+      <p>¡Domina Silhouette Cameo y lleva tus proyectos al siguiente nivel con este curso intensivo diseñado especialmente para ti!</p>
+      <p><strong>DURACIÓN:</strong><br>📅 3 días intensivos<br>⏰ 5 horas diarias</p>
+      <p><strong>INCLUYE:</strong><br>✅ Materiales completos para prácticas.<br>✅ Uso de computadora para realizar los ejercicios.<br>✅ Supervisión personalizada de una profesora experta que te guiará en teoría y práctica.</p>
+      <p><strong>CONTENIDO DEL CURSO:</strong></p>
+      <ul>
+        <li style="margin-top: -25px;">🎨 <strong>Diseño y corte:</strong>
+          <ul>
+            <li>Corte en vinil autoadhesivo.</li>
+            <li>Corte en vinilo textil.</li>
+            <li>Cómo diseñar con la Silhouette Cameo.</li>
+            <li>Uso del software Silhouette Studio.</li>
+          </ul>
+        </li>
+        <li>👕 <strong>Aplicaciones prácticas:</strong>
+          <ul>
+            <li>Cómo planchar el vinil textil en una prenda.</li>
+            <li>Cómo rotular con vinil autoadhesivo en termos y globos.</li>
+          </ul>
+        </li>
+        <li>🎉 <strong>Creación de productos personalizados:</strong>
+          <ul>
+            <li>Cómo crear toppers (marcas de registro y print & cut).</li>
+            <li>Cómo hacer stickers.</li>
+          </ul>
+        </li>
+        <li>🔧 <strong>Técnicas avanzadas:</strong>
+          <ul>
+            <li>Qué cuchillas usar según el material.</li>
+            <li>Configuración de corte para cada tipo de material.</li>
+            <li>Tips y recomendaciones para mejores resultados.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Inversión:</strong> 90$</p>
+      <p><strong>Ideal para:</strong><br>Emprendedores, diseñadores y entusiastas que desean aprender a utilizar Silhouette Cameo de forma profesional en un tiempo récord.</p>
+      <p>¡INSCRIBETE YA! y comienza a crear productos únicos con confianza y creatividad!</p>
+      <a href="{% url 'curso_detail' 7 %}" class="btn-inscribirse">comprar</a>
+    </div>
+
+    <!-- Imagen -->
+    <div class="col-12 col-md-6 text-center mt-4 mt-md-0">
+      <img src="{% static 'my_page/assets/images/pagina1-01.jpg' %}" 
+           alt="Curso Silhouette Cameo" 
+           style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    </div>
+
+  </div>
+</div>
+
+<div class="line"></div>
+<!-- Imagen 
+<div class="container mt-4 CONTAINESTEXTO">
+  <div class="row align-items-start"> -->
+
+    <!-- Sección de texto 
+    <div class="col-12 col-md-6 text-start px-4" style="color: black;">
+      <h2><strong>Curso Avanzado de Silhouette Cameo + Adobe Illustrator</strong></h2>
+      <p>¡Lleva tus habilidades al siguiente nivel con este curso intensivo avanzado! Aprenderás a combinar teoría y práctica en diseño creativo, con un enfoque especial en Adobe Illustrator para proyectos tridimensionales y diseño estructural.</p>
+      <p><strong>DURACIÓN:</strong><br>📅 5 días intensivos<br>⏰ 5 horas diarias</p>
+      <p><strong>INCLUYE:</strong><br>✅ Materiales completos para prácticas.<br>✅ Uso de computadora para realizar los ejercicios.<br>✅ Supervisión personalizada de una profesora experta que te guiará en teoría y práctica.</p>
+      <p><strong>CONTENIDO DEL CURSO:</strong></p>
+      <ul>
+        <li style="margin-top: -25px;">🎨 <strong>Diseño Avanzado:</strong>
+          <ul>
+            <li>Maxi Toppers: Diseño y corte personalizados.</li>
+            <li>Manipulación de vectores: Trabajos a partir de formatos de Illustrator.</li>
+            <li>Letras 3D en Illustrator: Diseño de tipografía tridimensional.</li>
+          </ul>
+        </li>
+        <li>📦 <strong>Proyectos Creativos:</strong>
+          <ul>
+            <li>Rompecabezas: Diseño y corte de piezas personalizadas.</li>
+            <li>Elaboración de cajas en Illustrator: Modelado para proyectos y empaques.</li>
+          </ul>
+        </li>
+        <li>🌸 <strong>Técnicas Especiales:</strong>
+          <ul>
+            <li>Flores de cartulina: Técnicas de corte y armado.</li>
+            <li>Estampado con papel de transferencia: Diseño y aplicación en textiles.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>INVERSIÓN: 125$</strong><br>
+        Este programa se centra en el uso de Adobe Illustrator como herramienta principal para diseños estructurales y tridimensionales, ofreciendo un enfoque práctico y avanzado que te permitirá destacar en tus proyectos.
+        ¡Inscríbete ahora y potencia tu creatividad al máximo!</p>
+    </div>
+ 
+    
+    <div class="col-12 col-md-6 text-center mt-4 mt-md-0">
+      <img src="{% static 'my_page/assets/images/motion.jpg' %}" 
+           alt="Curso Silhouette Cameo" 
+           style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    </div>
+
+  </div>
+</div>
+ -->
+
+<!-- para numeros telefonicos-->
+<script>
+  const telefonoInput = document.getElementById('telefono');
+  const telefonoError = document.getElementById('telefono-error');
+
+  telefonoInput.addEventListener('input', () => {
+    const isValid = /^[0-9]*$/.test(telefonoInput.value); // Verifica solo números
+    telefonoError.style.display = isValid ? 'none' : 'block'; // Muestra/oculta el mensaje de error
+  });
+</script>
+<!-- para numeros telefonicos-->
+
+<!-- para que solo sean lunes o jueves-->
+
+<script>
+  const fechaInput = document.getElementById('fecha');
+  const fechaError = document.getElementById('fecha-error');
+
+  function validarFecha() {
+    const fechaSeleccionada = new Date(fechaInput.value);
+
+    if (isNaN(fechaSeleccionada)) {
+      // Caso de fecha inválida o campo vacío
+      fechaError.style.display = 'block';
+      fechaError.textContent = 'Por favor, selecciona una fecha válida.';
+      fechaInput.setCustomValidity('Fecha inválida.');
+      return;
+    }
+
+    const diaSemana = fechaSeleccionada.getDay(); // Obtiene el día de la semana (0 = domingo, ..., 6 = sábado)
+
+    // Lunes = 1, Jueves = 4
+    if (diaSemana === 1 || diaSemana === 4) {
+      fechaError.style.display = 'none'; // Oculta el mensaje de error
+      fechaInput.setCustomValidity(''); // Limpia el estado de error
+    } else {
+      fechaError.style.display = 'block'; // Muestra el mensaje de error
+      fechaError.textContent = 'Por favor, selecciona un lunes o jueves.';
+      fechaInput.setCustomValidity('Debes seleccionar un lunes o jueves.');
+    }
+  }
+
+  fechaInput.addEventListener('input', validarFecha);
+  fechaInput.addEventListener('change', validarFecha);
+</script>
+<!-- para restringir fechas que solo sean lunes o jueves-->
+
+
+  <script>
+    // Lista de todas las rutas de imágenes //
+    const imagePaths = [
+      "{% static 'my_page/assets/images/toppers/baseball.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/dilia.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/froze.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/intensamente.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/kuromi.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/intensamente1.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/minnie.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/moana.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/monster.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/niurka.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/peach.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/peachladri.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/perritos.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/stitch.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/yei.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/yami.jpg' %}",
+      "{% static 'my_page/assets/images/toppers/messi.jpg' %}"
+    ];
+
+    const images = document.querySelectorAll('.caja img');
+
+    // Coloca las imágenes iniciales sin repeticiones
+    let visibleImages = [...imagePaths.slice(0, images.length)];
+    visibleImages.forEach((src, i) => {
+      images[i].src = src;
+    });
+
+    function changeRandomImage() {
+      // Selecciona un índice aleatorio de las imágenes visibles en el grid
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const selectedImage = images[randomIndex];
+
+      // Obtén una imagen no visible actualmente
+      const availableImages = imagePaths.filter(src => !visibleImages.includes(src));
+      if (availableImages.length === 0) return;
+
+      const newImagePath = availableImages[Math.floor(Math.random() * availableImages.length)];
+
+      // Realiza la transición de desvanecimiento
+      selectedImage.style.opacity = '0';
+      setTimeout(() => {
+        // Cambia la imagen
+        visibleImages[randomIndex] = newImagePath;
+        selectedImage.src = newImagePath;
+        selectedImage.style.opacity = '1';
+      }, 500);
+    }
+
+    // Ejecuta el cambio de imagen en intervalos regulares
+    setInterval(changeRandomImage, 2000);
+  </script>  
+
+ 
+{% endblock %}

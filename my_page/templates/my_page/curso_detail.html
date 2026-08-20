@@ -1,0 +1,73 @@
+{% extends 'my_page/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container mt-5 pt-5 pt-md-5" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="{{ course.preview_image.url }}" class="img-fluid rounded border shadow" alt="{{ course.title }}">
+        </div>
+
+        <div class="col-md-6">
+            <h2>{{ course.title }}</h2>
+            <h4 class="text-success">${{ course.price }}</h4>
+            <p class="mt-4">{{ course.description }}</p>
+
+            <div id="paypal-button-container"></div>
+            <div id="download-section" style="display:none;">
+                <div class="alert alert-success" role="alert">
+                    ✅ ¡Gracias por tu compra! Ya puedes ver tu curso en tu perfil.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PayPal -->
+<script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&currency=USD"></script>
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: { value: '{{ course.price }}' },
+                    description: '{{ course.title }}'
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                fetch('/guardar-compra-curso/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        course_id: {{ course.id }},
+                        paypal_order_id: data.orderID,
+                        amount: '{{ course.price }}'
+                    })
+                }).then(function(response) {
+                    document.getElementById('successModal').style.display = 'flex';
+
+                    setTimeout(function() {
+                        window.location.href = "{% url 'ver_curso' course.id %}";
+                    }, 3000);
+                });
+            });
+        },
+        onError: function(err) {
+            alert('Error en el pago. Intenta de nuevo.');
+        }
+    }).render('#paypal-button-container');
+</script>
+
+<div id="successModal" onclick="if(event.target === this) this.style.display='none';" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:white; padding:40px; border-radius:10px; text-align:center; max-width:400px; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+        <div style="font-size:50px; color:#28a745;">✅</div>
+        <h3 class="mt-3">¡Pago exitoso!</h3>
+        <p class="text-muted">Redirigiendo a tu curso...</p>
+    </div>
+</div>
+{% endblock %}

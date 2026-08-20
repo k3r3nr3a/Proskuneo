@@ -1,0 +1,19 @@
+{% extends 'my_page/base.html' %}
+
+{% block content %}
+  <h2>Verifica tu Correo</h2>
+  <p>Tu cuenta aún no está verificada. Por favor revisa tu correo para confirmar tu dirección.</p>
+
+  <form method="post" action="{% url 'resend_email_verification' %}">
+    {% csrf_token %}
+    <button type="submit">Reenviar correo de verificación</button>
+  </form>
+
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

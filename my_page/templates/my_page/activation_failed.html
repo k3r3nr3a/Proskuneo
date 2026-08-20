@@ -1,0 +1,9 @@
+{% extends 'my_page/base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <h3>Enlace inválido o expirado</h3>
+  <p>Por favor regístrate nuevamente.</p>
+  <a href="{% url 'signup' %}" class="btn btn-warning">Registrarse</a>
+</div>
+{% endblock %}

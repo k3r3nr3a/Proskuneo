@@ -1,0 +1,8 @@
+Hola,
+
+Gracias por registrarte en {{ current_site.name }}.
+Por favor haz clic en el siguiente enlace para confirmar tu dirección de correo electrónico:
+
+{{ activate_url }}
+
+Si no realizaste este registro, puedes ignorar este correo.

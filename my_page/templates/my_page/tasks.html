@@ -1,0 +1,45 @@
+{% extends 'my_page/base.html'%}
+
+
+{% block content %}
+<h1 style="margin-top: 100px;"> Tasks </h1>
+
+<ul> 
+    {% for task in tasks %}
+    <li>
+        <a href="{% url 'task_detail' task.id %}">
+            {% if task.important %}
+            <strong>{{task.title}}</strong>
+            {% else %}
+                {{task.title}}
+            {% endif %}
+    
+            
+            <p>{{task.description}}</p>
+            <p>{{task.user.username}}</p>
+        </a>
+    </li>
+    {% endfor %}
+    {% if not user.is_active %}
+    <div style="background: #ffe0e0; padding: 10px; border-radius: 8px;">
+      <p>Tu cuenta aún no está verificada. Por favor revisa tu correo.</p>
+      <form method="post" action="{% url 'resend_email_verification' %}">
+        {% csrf_token %}
+        <button type="submit" style="background: #c62828; color: white; padding: 6px 12px; border: none; border-radius: 4px;">
+          Reenviar correo de verificación
+        </button>
+      </form>
+    </div>
+  {% endif %}
+
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+      <li style="color: green;">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+</ul>
+
+{% endblock %}
+

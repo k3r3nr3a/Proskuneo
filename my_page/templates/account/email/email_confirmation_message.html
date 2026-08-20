@@ -1,0 +1,22 @@
+{% autoescape off %}
+<html>
+  <body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
+    <table style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 30px;">
+      <tr>
+        <td style="text-align: center;">
+          <h2 style="color: #ff5733;">¡Bienvenido, {{ user.username }}!</h2>
+          <p style="font-size: 16px; color: #555;">
+            Gracias por registrarte. Por favor haz clic en el botón para confirmar tu correo electrónico:
+          </p>
+          <a href="{{ activate_url }}" style="display: inline-block; margin-top: 20px; padding: 10px 25px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">
+            Confirmar mi correo
+          </a>
+          <p style="font-size: 14px; color: #999; margin-top: 30px;">
+            Si tú no realizaste este registro, simplemente ignora este mensaje.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+{% endautoescape %}
