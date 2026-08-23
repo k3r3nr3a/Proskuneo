@@ -9,8 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY ---
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 # --- INSTALLED APPS ---
 INSTALLED_APPS = [
@@ -91,6 +91,7 @@ SOCIALACCOUNT_PROVIDERS = {
 # --- MIDDLEWARE ---
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -151,9 +152,17 @@ USE_I18N = True
 USE_TZ = True
 
 # --- ARCHIVOS ESTÁTICOS ---
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "my_page/static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # --- EMAIL / MAILTRAP ---
 # --- EMAIL / GMAIL ---
@@ -166,4 +175,4 @@ EMAIL_USE_TLS = True
 
 # --- OTROS ---
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"  # Cambia a "https" en producción
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"  # Cambia a "https" en producción
