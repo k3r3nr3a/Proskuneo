@@ -331,7 +331,13 @@ def email_confirmed_view(request):
 
 
 def vector_gallery(request):
+
     designs = VectorDesign.objects.all()
+
+    print("=== VECTOR DESIGNS ===")
+    print("CANTIDAD:", designs.count())
+    print("======================")
+
     return render(request, 'my_page/vector_gallery.html', {'designs': designs})
 
 
