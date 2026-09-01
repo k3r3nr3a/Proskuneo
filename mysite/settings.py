@@ -5,8 +5,6 @@ import os
 
 
 load_dotenv()
-
-
 # --- BASE DIRECTORY ---
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -139,19 +137,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
-
-from django.db import connection
-
-try:
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT 1")
-        print("=== POSTGRESQL ===")
-        print("CONEXION EXITOSA")
-        print("==================")
-except Exception as e:
-    print("=== ERROR POSTGRESQL ===")
-    print(type(e).__name__, str(e))
-    print("========================")
 
 # --- VALIDACIÓN DE CONTRASEÑAS ---
 AUTH_PASSWORD_VALIDATORS = [
