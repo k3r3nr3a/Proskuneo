@@ -3,7 +3,16 @@ from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 import os
 
+
 load_dotenv()
+
+print("=== VARIABLES DE BASE DE DATOS ===")
+print("DB_NAME:", os.getenv("DB_NAME"))
+print("DB_USER:", os.getenv("DB_USER"))
+print("DB_HOST:", os.getenv("DB_HOST"))
+print("DB_PORT:", os.getenv("DB_PORT"))
+print("DB_PASSWORD:", "CONFIGURADA" if os.getenv("DB_PASSWORD") else "NO CONFIGURADA")
+print("=================================")
 # --- BASE DIRECTORY ---
 BASE_DIR = Path(__file__).resolve().parent.parent
 
