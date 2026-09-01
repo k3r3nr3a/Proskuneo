@@ -6,13 +6,7 @@ import os
 
 load_dotenv()
 
-print("=== VARIABLES DE BASE DE DATOS ===")
-print("DB_NAME:", os.getenv("DB_NAME"))
-print("DB_USER:", os.getenv("DB_USER"))
-print("DB_HOST:", os.getenv("DB_HOST"))
-print("DB_PORT:", os.getenv("DB_PORT"))
-print("DB_PASSWORD:", "CONFIGURADA" if os.getenv("DB_PASSWORD") else "NO CONFIGURADA")
-print("=================================")
+
 # --- BASE DIRECTORY ---
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -145,6 +139,19 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
+
+from django.db import connection
+
+try:
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT 1")
+        print("=== POSTGRESQL ===")
+        print("CONEXION EXITOSA")
+        print("==================")
+except Exception as e:
+    print("=== ERROR POSTGRESQL ===")
+    print(type(e).__name__, str(e))
+    print("========================")
 
 # --- VALIDACIÓN DE CONTRASEÑAS ---
 AUTH_PASSWORD_VALIDATORS = [
