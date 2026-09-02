@@ -1,0 +1,222 @@
+[
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 3,
+
+
+  "fields": {
+
+
+    "title": "Topper de Sonic 3D",
+
+
+    "description": "Papel fotográfico de 180 gr, cartulina opalina, cartulina metalizada",
+
+
+    "price": "3.00",
+
+
+    "preview_image": "previews/SaveClip_kTBD2Gi.App_487534519_18273123613250587_4338585467481973609_n.jpg",
+
+
+    "vector_file": "vectors/topper3Dsonic.rar",
+
+
+    "created_at": "2025-05-06T20:42:45.190Z"
+
+
+  }
+
+
+},
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 4,
+
+
+  "fields": {
+
+
+    "title": "Topper de sonic 3D",
+
+
+    "description": "Papel fotográfico de 180 gr, cartulina opalina, cartulina metalizada",
+
+
+    "price": "3.80",
+
+
+    "preview_image": "previews/475578305_18267246820250587_1853312678609373025_n.webp",
+
+
+    "vector_file": "vectors/ToppersSonicarco.rar",
+
+
+    "created_at": "2025-05-06T21:09:56.701Z"
+
+
+  }
+
+
+},
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 5,
+
+
+  "fields": {
+
+
+    "title": "Balón de futbol 3D",
+
+
+    "description": "¡Siente la pasión del fútbol en tus manos con esta descarga digital! Corta con total precisión cada pieza en cartulina opalina usando tu Silhouette Cameo y vive la emoción de ver cómo las figuras planas se transforman en un increíble balón tridimensional. Es el proyecto perfecto para desafiar tu creatividad, relajarte y meter un verdadero golazo de diversión mientras lo armas paso a paso.",
+
+
+    "price": "3.80",
+
+
+    "preview_image": "previews/balon_de_futbol_o2ZsXTE.jpeg",
+
+
+    "vector_file": "vectors/troquel_de_futbol.7z",
+
+
+    "created_at": "2026-06-23T23:43:08.133Z"
+
+
+  }
+
+
+},
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 6,
+
+
+  "fields": {
+
+
+    "title": "troquel de corazon",
+
+
+    "description": "Materiales aptos para troquel de corazón:\r\nCartulina doble faz\r\nCartulina Bristol (corrección de \"betono\")\r\nGramaje de 250 g/m²",
+
+
+    "price": "2.50",
+
+
+    "preview_image": "previews/troquel_de_corazon.jpeg",
+
+
+    "vector_file": "vectors/troquel_de_corazon_papercraft.zip",
+
+
+    "created_at": "2026-06-28T01:49:19.252Z"
+
+
+  }
+
+
+},
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 7,
+
+
+  "fields": {
+
+
+    "title": "troquel de bambalina",
+
+
+    "description": "Haz troqueles de bambalinas para tus entregas",
+
+
+    "price": "1.50",
+
+
+    "preview_image": "previews/bambalina.jpeg",
+
+
+    "vector_file": "vectors/troquel_de_bambalina.7z",
+
+
+    "created_at": "2026-06-28T16:46:30.815Z"
+
+
+  }
+
+
+},
+
+
+{
+
+
+  "model": "my_page.vectordesign",
+
+
+  "pk": 8,
+
+
+  "fields": {
+
+
+    "title": "Caja de Uno",
+
+
+    "description": "¡Personaliza esta caja tú mismo! Hazlo de forma fácil y sencilla usando papel fotográfico de 180g para lograr un acabado único, resistente y profesional.",
+
+
+    "price": "1.20",
+
+
+    "preview_image": "previews/caja_de_uno.jpeg",
+
+
+    "vector_file": "vectors/caja_de_uno.7z",
+
+
+    "created_at": "2026-06-28T18:20:55.186Z"
+
+
+  }
+
+
+}
+
+
+]
+
+
