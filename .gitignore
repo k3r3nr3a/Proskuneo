@@ -18,7 +18,8 @@ __pycache__/
 
 # Django
 staticfiles/
-media/
+media/vectors/
+mysite/settings_backup.py
 
 # IDE
 .vscode/
