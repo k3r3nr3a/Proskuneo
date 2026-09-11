@@ -4,7 +4,7 @@ import os
 
 
 class Command(BaseCommand):
-    help = "Temporarily reset the admin password"
+    help = "Create or reset the admin user"
 
     def handle(self, *args, **options):
         User = get_user_model()
@@ -18,19 +18,33 @@ class Command(BaseCommand):
             )
             return
 
-        try:
-            user = User.objects.get(username=username)
-        except User.DoesNotExist:
-            self.stdout.write(
-                self.style.ERROR(f"User '{username}' does not exist.")
-            )
-            return
-
-        user.set_password(password)
-        user.save()
-
-        self.stdout.write(
-            self.style.SUCCESS(
-                f"Password successfully reset for '{username}'."
-            )
+        user, created = User.objects.get_or_create(
+            username=username,
+            defaults={
+                "is_staff": True,
+                "is_superuser": True,
+                "is_active": True,
+            },
         )
+
+        if created:
+            user.set_password(password)
+            user.save()
+
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f"Admin user '{username}' created successfully."
+                )
+            )
+        else:
+            user.is_staff = True
+            user.is_superuser = True
+            user.is_active = True
+            user.set_password(password)
+            user.save()
+
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f"Admin user '{username}' password reset successfully."
+                )
+            )
