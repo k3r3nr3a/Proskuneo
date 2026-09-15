@@ -139,7 +139,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
     }
 }
-
 # --- VALIDACIÓN DE CONTRASEÑAS ---
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
@@ -179,3 +178,5 @@ EMAIL_USE_TLS = True
 # --- OTROS ---
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"  # Cambia a "https" en producción
+
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
