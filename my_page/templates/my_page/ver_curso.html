@@ -1,18 +1,21 @@
-{% extends 'my_page/base.html' %}
+```{% extends 'my_page/base.html' %}
 {% load static %}
+{% load youtube_filters %}
 
 {% block content %}
 <section class="container mt-5 pt-5 mb-5">
     <h2>{{ course.title }}</h2>
     <hr>
-    
+
+
     {% for video in course.videos.all %}
     <div class="mb-5">
         <h4>{{ video.title }}</h4>
         <div class="ratio ratio-16x9 mt-3">
-            <iframe src="{{ video.youtube_url }}" 
-                    title="{{ video.title }}" 
-                    frameborder="0" 
+         <iframe src="{{ video.youtube_url|youtube_embed }}"
+                    title="{{ video.title }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
             </iframe>
         </div>
@@ -21,3 +24,4 @@
 
 </section>
 {% endblock %}
+```
