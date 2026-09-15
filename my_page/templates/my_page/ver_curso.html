@@ -13,11 +13,12 @@
         <h4>{{ video.title }}</h4>
         <div class="ratio ratio-16x9 mt-3">
          <iframe src="{{ video.youtube_url|youtube_embed }}"
-                    title="{{ video.title }}"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-            </iframe>
+                title="{{ video.title }}"
+                frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+        </iframe>
         </div>
     </div>
     {% endfor %}
