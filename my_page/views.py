@@ -307,8 +307,9 @@ def signin(request):
 
 def signup(request):
     next_url = request.POST.get('next') or request.GET.get('next', '')
-    
+
     if request.method == "POST":
+        print("SIGNUP DATA:", request.POST.get("username"), request.POST.get("email"))
         form = CustomSignupForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
