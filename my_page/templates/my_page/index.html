@@ -157,7 +157,8 @@
           </div>
          <div class="col-lg-5 col-md-6">
             <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{% url 'contact' %}" method="post" role="form" class="php-email-form">
+                   {% csrf_token %}
                 <div class="row">
                   <div class="form-group col-lg-6">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
@@ -214,7 +215,7 @@
   <script src="{% static 'my_page/assets/vendor/aos/aos.js' %}"></script>
   <script src="{% static 'my_page/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'my_page/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'my_page/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'my_page/assets/vendor/php-email-form/validate.js' %}?v=2"></script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'my_page/js/main.js' %}"></script>

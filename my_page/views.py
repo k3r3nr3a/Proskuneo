@@ -11,10 +11,12 @@ from django.contrib.auth.decorators import login_required
 from .models import Task, VectorDesign, Purchase
 import os
 import json
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
+from django.core.mail import EmailMessage
 from django.http import FileResponse
 from .models import Course, CoursePurchase
 from decimal import Decimal
+from django.core.mail import EmailMessage
 from django.views.decorators.http import require_POST
 import requests
 
@@ -203,6 +205,46 @@ User = get_user_model()
 def index(request):
     return render(request, 'my_page/index.html')
 
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        subject = request.POST.get('subject', '').strip()
+        message = request.POST.get('message', '').strip()
+
+        if not name or not email or not subject or not message:
+            return JsonResponse({
+                'status': 'error',
+                'message': 'Todos los campos son obligatorios.'
+            }, status=400)
+
+        try:
+            email_message = EmailMessage(
+                subject=f'Contacto Proskuneo: {subject}',
+                body=(
+                    f'Nombre: {name}\n'
+                    f'Email: {email}\n\n'
+                    f'Mensaje:\n{message}'
+                ),
+                from_email=os.getenv('DEFAULT_FROM_EMAIL'),
+                to=['proskuneokrzj@gmail.com'],
+                reply_to=[email],
+            )
+
+            email_message.send(fail_silently=False)
+            
+            return HttpResponse('OK')
+
+        except Exception as e:
+            print("ERROR CONTACTO:", repr(e))
+            print("ERROR CONTACTO STR:", str(e))
+            print("ERROR CONTACTO ARGS:", e.args)
+            raise
+
+    return JsonResponse({
+        'status': 'error',
+        'message': 'Método no permitido.'
+    }, status=405)
 
 def inscripcion(request):
     return render(request, 'my_page/inscripcion.html')

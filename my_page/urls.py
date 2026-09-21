@@ -33,6 +33,7 @@ urlpatterns = [
     # Galería de vectores
     path('vectores/', views.vector_gallery, name='vector_gallery'),
     path('vectores/<int:design_id>/', views.vector_detail, name='vector_detail'),
+    path('contact/', views.contact, name='contact'),
 ]
 
 # Configuración para servir archivos estáticos en modo desarrollo
