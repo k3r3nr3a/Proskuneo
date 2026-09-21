@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Task, VectorDesign, VectorImage, Course, CourseVideo, CoursePurchase
-
+from .models import Task, VectorDesign, VectorImage, Course, CourseVideo, CoursePurchase, Purchase
 
 class TaskAdmin(admin.ModelAdmin):
     readonly_fields = ("created", )
@@ -27,3 +26,33 @@ class CourseAdmin(admin.ModelAdmin):
 admin.site.register(Course, CourseAdmin)
 admin.site.register(CoursePurchase)
 admin.site.register(CourseVideo)
+
+
+@admin.register(Purchase)
+class PurchaseAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+        'design',
+        'amount',
+        'purchased_at',
+        'download_count',
+        'paypal_order_id',
+    )
+
+    list_filter = (
+        'purchased_at',
+        'design',
+    )
+
+    search_fields = (
+        'user__username',
+        'user__email',
+        'design__title',
+        'paypal_order_id',
+    )
+
+    readonly_fields = (
+        'purchased_at',
+    )
+
+    ordering = ('-purchased_at',)
