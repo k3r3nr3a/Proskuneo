@@ -29,9 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
-   
 
+    'cloudinary',
+    'cloudinary_storage',
+    
     # Apps del proyecto
     'my_page',
 
@@ -133,6 +134,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
+
 # --- BASE DE DATOS ---
 DATABASES = {
     'default': {
@@ -164,7 +167,7 @@ STATICFILES_DIRS = [BASE_DIR / "my_page/static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STORAGES = {
     "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
