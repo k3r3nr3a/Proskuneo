@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User 
-
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 class Task(models.Model):
     title = models.CharField(max_length=100)
@@ -18,10 +18,18 @@ class Task(models.Model):
 
 class VectorDesign(models.Model):
     title = models.CharField(max_length=255)
+
     description = models.TextField()
+
     price = models.DecimalField(max_digits=6, decimal_places=2)
+
     preview_image = models.ImageField(upload_to='previews/')
-    vector_file = models.FileField(upload_to='vectors/')  # Puedes subir .zip, .rar
+
+    vector_file = models.FileField(
+        upload_to='vectors/',
+        storage=RawMediaCloudinaryStorage(),
+    )
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
