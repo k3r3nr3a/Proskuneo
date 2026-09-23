@@ -1,222 +1,86 @@
 [
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 3,
-
-
   "fields": {
-
-
     "title": "Topper de Sonic 3D",
-
-
-    "description": "Papel fotogrÃ¡fico de 180 gr, cartulina opalina, cartulina metalizada",
-
-
+    "description": "Papel fotográfico de 180 gr, cartulina opalina, cartulina metalizada",
     "price": "3.00",
-
-
     "preview_image": "media/previews/SaveClip_kTBD2Gi.App_487534519_18273123613250587_4338585467481973609_n_j3c3eb",
-
-
     "vector_file": "vectors/topper3Dsonic.rar",
-
-
     "created_at": "2025-05-06T20:42:45.190Z"
-
-
   }
-
-
 },
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 4,
-
-
   "fields": {
-
-
     "title": "Topper de sonic 3D",
-
-
-    "description": "Papel fotogrÃ¡fico de 180 gr, cartulina opalina, cartulina metalizada",
-
-
+    "description": "Papel fotográfico de 180 gr, cartulina opalina, cartulina metalizada",
     "price": "3.80",
-
-
     "preview_image": "media/previews/475578305_18267246820250587_1853312678609373025_n_xqen4m",
-
-
     "vector_file": "vectors/ToppersSonicarco.rar",
-
-
     "created_at": "2025-05-06T21:09:56.701Z"
-
-
   }
-
-
 },
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 5,
-
-
   "fields": {
-
-
-    "title": "BalÃ³n de futbol 3D",
-
-
-    "description": "Â¡Siente la pasiÃ³n del fÃºtbol en tus manos con esta descarga digital! Corta con total precisiÃ³n cada pieza en cartulina opalina usando tu Silhouette Cameo y vive la emociÃ³n de ver cÃ³mo las figuras planas se transforman en un increÃ­ble balÃ³n tridimensional. Es el proyecto perfecto para desafiar tu creatividad, relajarte y meter un verdadero golazo de diversiÃ³n mientras lo armas paso a paso.",
-
-
+    "title": "Balón de futbol 3D",
+    "description": "¡Siente la pasión del fútbol en tus manos con esta descarga digital! Corta con total precisión cada pieza en cartulina opalina usando tu Silhouette Cameo y vive la emoción de ver cómo las figuras planas se transforman en un increíble balón tridimensional. Es el proyecto perfecto para desafiar tu creatividad, relajarte y meter un verdadero golazo de diversión mientras lo armas paso a paso.",
     "price": "3.80",
-
-
     "preview_image": "media/previews/balon_de_futbol_o2ZsXTE_svz5l8",
-
-
     "vector_file": "vectors/troquel_de_futbol.7z",
-
-
     "created_at": "2026-06-23T23:43:08.133Z"
-
-
   }
-
-
 },
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 6,
-
-
   "fields": {
-
-
     "title": "troquel de corazon",
-
-
-    "description": "Materiales aptos para troquel de corazÃ³n:\r\nCartulina doble faz\r\nCartulina Bristol (correcciÃ³n de \"betono\")\r\nGramaje de 250 g/mÂ²",
-
-
+    "description": "Materiales aptos para troquel de corazón:\r\nCartulina doble faz\r\nCartulina Bristol (corrección de \"betono\")\r\nGramaje de 250 g/m²",
     "price": "2.50",
-
-
     "preview_image": "media/previews/troquel_de_corazon_qjfhfy",
-
-
     "vector_file": "vectors/troquel_de_corazon_papercraft.zip",
-
-
     "created_at": "2026-06-28T01:49:19.252Z"
-
-
   }
-
-
 },
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 7,
-
-
   "fields": {
-
-
     "title": "troquel de bambalina",
-
-
     "description": "Haz troqueles de bambalinas para tus entregas",
-
-
     "price": "1.50",
-
-
     "preview_image": "media/previews/bambalina_vbekrd",
-
-
     "vector_file": "vectors/troquel_de_bambalina.7z",
-
-
     "created_at": "2026-06-28T16:46:30.815Z"
-
-
   }
-
-
 },
-
-
 {
-
-
   "model": "my_page.vectordesign",
-
-
   "pk": 8,
-
-
   "fields": {
-
-
     "title": "Caja de Uno",
-
-
-    "description": "Â¡Personaliza esta caja tÃº mismo! Hazlo de forma fÃ¡cil y sencilla usando papel fotogrÃ¡fico de 180g para lograr un acabado Ãºnico, resistente y profesional.",
-
-
+    "description": "¡Personaliza esta caja tú mismo! Hazlo de forma fácil y sencilla usando papel fotográfico de 180g para lograr un acabado único, resistente y profesional.",
     "price": "1.20",
-
-
     "preview_image": "media/previews/caja_de_uno_sxwikm",
-
-
     "vector_file": "vectors/caja_de_uno.7z",
-
-
     "created_at": "2026-06-28T18:20:55.186Z"
-
-
   }
-
-
+},
+{
+  "model": "my_page.vectordesign",
+  "pk": 9,
+  "fields": {
+    "title": "troquel de cotufas",
+    "description": "Conversación en el Modo IA: voy a vender un archivo de troquel cotufas para cameo, dame una descripcion corta y emotivaDijiste: voy a vender un archivo de troquel cotufas para cameo, dame una descripcion corta y emotivavoy a vender un archivo de troquel cotufas para cameo, dame una descripcion corta y emotiva21 de septiembre de 2026Transforma tus celebraciones y noches de películas en recuerdos inolvidables. Con este archivo de troquel listo para tu Silhouette Cameo, podrás crear hermosas cajitas de cotufas que llenarán de magia y ternura cada rincón de tu mesa. Sorprende a quienes más amas y comparte la felicidad de un detalle hecho completamente a mano y desde el corazón. Descarga el diseño hoy y dale un toque único a tus momentos especiales.",
+    "price": "2.50",
+    "preview_image": "media/previews/troquel_de_cotufa7_ihewk8",
+    "vector_file": "vectors/troquel_de_cotufa_spiderman.7z",
+    "created_at": "2026-09-23T05:31:35.479Z"
+  }
 }
-
-
 ]
-
-
