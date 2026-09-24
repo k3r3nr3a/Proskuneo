@@ -1,12 +1,12 @@
-[
+﻿[
 {
   "model": "my_page.course",
   "pk": 7,
   "fields": {
     "title": "curso inicial silhouette cameo 1",
-    "description": "Este curso práctico de Silhouette Cameo te llevará desde el nivel básico hasta el avanzado, dominando desde el corte y depilado de vinil autoadhesivo y textil para personalizar una gran variedad de objetos, hasta las técnicas de Print & Cut para papelería creativa.",
+    "description": "Este curso prÃ¡ctico de Silhouette Cameo te llevarÃ¡ desde el nivel bÃ¡sico hasta el avanzado, dominando desde el corte y depilado de vinil autoadhesivo y textil para personalizar una gran variedad de objetos, hasta las tÃ©cnicas de Print & Cut para papelerÃ­a creativa.",
     "price": "50.00",
-    "preview_image": "cursos/video3.jpg"
+    "preview_image": "media/cursos/curso_cameo_kmkkn8"
   }
 },
 {
@@ -50,3 +50,4 @@
   }
 }
 ]
+
