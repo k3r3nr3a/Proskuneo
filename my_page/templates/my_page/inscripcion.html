@@ -169,7 +169,7 @@
         <li>Tips y recomendaciones profesionales para evitar burbujas y lograr mejores resultados.</li>
       </ul>
     </li>
-  </ul> 
+  </ul>
 
   <p><strong>Inversión:</strong> 15$</p>
 
@@ -178,22 +178,21 @@
   </p>
 
   <p><strong>¡INSCRÍBETE YA!</strong> ¡Accede a los videos y comienza a crear productos únicos con confianza y creatividad!</p>
+
+  <!-- Botón de compra -->
+  <a href="{% url 'curso_detail' 7 %}" class="btn-inscribirse">comprar</a>
 </div>
-```
 
-      <p>¡INSCRIBETE YA! y comienza a crear productos únicos con confianza y creatividad!</p>
-      <a href="{% url 'curso_detail' 7 %}" class="btn-inscribirse">comprar</a>
-    </div>
-
-    <!-- Imagen -->
-    <div class="col-12 col-md-6 text-center mt-4 mt-md-0">
-      <img src="{% static 'my_page/assets/images/pagina1-01.jpg' %}" 
-           alt="Curso Silhouette Cameo" 
-           style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-    </div>
-
-  </div>
+<!-- Imagen -->
+<div class="col-12 col-md-6 text-center mt-4 mt-md-0">
+  <img src="{% static 'my_page/assets/images/pagina1-01.jpg' %}" 
+       alt="Curso Silhouette Cameo" 
+       style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
 </div>
+
+</div>
+</div>
+
 
 <div class="line"></div>
 
@@ -302,3 +301,6 @@
 
  
 {% endblock %}
+
+
+
