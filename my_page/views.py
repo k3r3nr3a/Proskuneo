@@ -353,20 +353,34 @@ def signup(request):
     if request.method == "POST":
         print("SIGNUP DATA:", request.POST.get("username"), request.POST.get("email"))
         form = CustomSignupForm(request.POST)
+
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = False
+
+            # El usuario puede iniciar sesión inmediatamente
+            user.is_active = True
             user.save()
 
-            EmailAddress.objects.add_email(request, user, user.email, confirm=True)
+            # No se requiere confirmación del correo
+            EmailAddress.objects.add_email(
+                request,
+                user,
+                user.email,
+                confirm=False
+            )
 
             request.session['next_url'] = next_url
 
-            return render(request, 'my_page/confirmation_pending.html')
+            return redirect('/accounts/login/')
+
     else:
         form = CustomSignupForm()
 
-    return render(request, "my_page/signup.html", {"form": form, "next": next_url})
+    return render(
+        request,
+        "my_page/signup.html",
+        {"form": form, "next": next_url}
+    )
 
 
 def email_confirmed_view(request):

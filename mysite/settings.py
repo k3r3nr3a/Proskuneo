@@ -68,10 +68,18 @@ SITE_ID = 1
 # Requerir correo y username en signup
 ACCOUNT_SIGNUP_FIELDS = ['username*', 'email*', 'password1*', 'password2*']
 ACCOUNT_LOGIN_METHODS = {'username', 'email'}
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # Usuario debe confirmar correo
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
+ACCOUNT_LOGIN_METHODS = {'username', 'email'}
+
+ACCOUNT_SIGNUP_FIELDS = [
+    'username*',
+    'email*',
+    'password1*',
+    'password2*',
+]
+#ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # Usuario debe confirmar correo
+ACCOUNT_EMAIL_VERIFICATION = "none"  # Usuario no requiere confirmar correo
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True  # Auto-login tras confirmar correo
 
 # Expiración del link de confirmación
