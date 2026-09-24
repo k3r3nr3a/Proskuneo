@@ -758,6 +758,8 @@ a.btn-inscribirse,
 a.btn-inscribirse:link,
 a.btn-inscribirse:visited {
     display: inline-block !important;
+    width: auto !important;
+    max-width: fit-content !important;
     background-color: #1100ff !important;
     color: rgb(255, 255, 255) !important;
     text-decoration: none !important;
@@ -770,7 +772,6 @@ a.btn-inscribirse:visited {
     transition: 0.5s;
     margin: 10px;
     border: 2px solid #fff;
-    color: #fff;
 }
 
 a.btn-inscribirse:hover,
